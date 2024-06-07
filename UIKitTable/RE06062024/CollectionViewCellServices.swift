@@ -9,11 +9,8 @@ import UIKit
 
 class CollectionViewCellServices: UICollectionViewCell {
     
-    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        var newFrame = layoutAttributes.frame
-        newFrame.size = CGSize(width: 128, height: 128)
-        layoutAttributes.frame = newFrame
-        return layoutAttributes
-    }
+    @IBOutlet weak var serviceImageView: UIImageView!
+    @IBOutlet weak var serviceLabel: UILabel!
+
     
 }
