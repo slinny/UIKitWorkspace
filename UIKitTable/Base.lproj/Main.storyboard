@@ -92,15 +92,14 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                                 <connections>
-                                    <action selector="addItem:" destination="RoH-hD-zif" eventType="touchUpInside" id="dmi-ZR-qSP"/>
+                                    <action selector="AddButtonPressed:" destination="eKs-4h-kzb" eventType="touchUpInside" id="VtO-kF-HVQ"/>
+                                    <action selector="AddButtonPressed:" destination="RoH-hD-zif" eventType="touchUpInside" id="k4i-9t-zWk"/>
                                 </connections>
                             </button>
-                            <connections>
-                                <action selector="addButtonPressed:" destination="RoH-hD-zif" id="cGz-Qx-NYj"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="AddItemButton" destination="vy3-Op-CLD" id="qFz-FW-hPo"/>
                         <outlet property="tableView" destination="1vj-Zw-ZqU" id="HbH-pR-sUy"/>
                     </connections>
                 </viewController>

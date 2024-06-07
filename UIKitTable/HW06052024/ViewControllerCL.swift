@@ -1,15 +1,8 @@
-//
-//  ViewControllerCL.swift
-//  UIKitTable
-//
-//  Created by Siran Li on 6/5/24.
-//
-
 import UIKit
 
 class ViewControllerCL: UIViewController {
     
-    
+    @IBOutlet weak var AddItemButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var checkItems = [CheckItem]()
     
@@ -23,6 +16,14 @@ class ViewControllerCL: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    @IBAction func AddButtonPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewCAddCL = storyboard.instantiateViewController(withIdentifier: "ViewControllerAddCL") as? ViewControllerAddCL {
+            navigationController?.pushViewController(viewCAddCL, animated: true)
+        }
+    }
+    
 }
 
 extension ViewControllerCL: UITableViewDataSource {
@@ -36,6 +37,7 @@ extension ViewControllerCL: UITableViewDataSource {
         cell.itemImageView.image = UIImage(systemName: checkItems[indexPath.row].imageName)
         cell.titleLabel.text = checkItems[indexPath.row].title
         cell.statusLabel.text = checkItems[indexPath.row].status
+        cell.delegate = self
         
         return cell
     }
@@ -46,5 +48,16 @@ extension ViewControllerCL: UITableViewDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewCCI = storyboard.instantiateViewController(withIdentifier: "ViewControllerCI") as! ViewControllerCI
         self.navigationController?.pushViewController(viewCCI, animated: true)
+    }
+}
+
+extension ViewControllerCL: TableCellButtonDelegate {
+    func didTapButton(in cell: UITableViewCell) {
+        if let _ = tableView.indexPath(for: cell) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let viewCAddCL = storyboard.instantiateViewController(withIdentifier: "ViewControllerAddCL") as? ViewControllerAddCL {
+                navigationController?.pushViewController(viewCAddCL, animated: true)
+            }
+        }
     }
 }

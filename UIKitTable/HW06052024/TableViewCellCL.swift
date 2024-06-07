@@ -1,11 +1,8 @@
-//
-//  TableViewCellCL.swift
-//  UIKitTable
-//
-//  Created by Siran Li on 6/5/24.
-//
-
 import UIKit
+
+protocol TableCellButtonDelegate: AnyObject {
+    func didTapButton(in cell: UITableViewCell)
+}
 
 class TableViewCellCL: UITableViewCell {
 
@@ -14,6 +11,8 @@ class TableViewCellCL: UITableViewCell {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var rightImageView: UIImageView!
+    
+    weak var delegate: TableCellButtonDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,10 +25,7 @@ class TableViewCellCL: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func addButtonPressed(_ sender: Any) {
-        
-    }
-    
     @IBAction func infoButtonPressed(_ sender: Any) {
+        delegate?.didTapButton(in: self)
     }
 }
