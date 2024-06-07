@@ -1,10 +1,3 @@
-//
-//  TableViewCellCI.swift
-//  UIKitTable
-//
-//  Created by Siran Li on 6/5/24.
-//
-
 import UIKit
 
 class TableViewCellCI: UITableViewCell {
@@ -14,6 +7,7 @@ class TableViewCellCI: UITableViewCell {
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var rightImageView: UIImageView!
     
+    weak var delegate: TableCellButtonDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,12 +19,8 @@ class TableViewCellCI: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-    @IBAction func addButtonPressed(_ sender: Any) {
-    }
     
     @IBAction func infoButtonPressed(_ sender: Any) {
+        delegate?.didTapButton(in: self)
     }
-    
-
 }

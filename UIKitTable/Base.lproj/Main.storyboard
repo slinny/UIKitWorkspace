@@ -193,18 +193,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mE2-rR-QmR">
-                                <rect key="frame" x="330" y="59" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
-                                <connections>
-                                    <action selector="addButton:" destination="qBj-KU-G7p" eventType="touchUpInside" id="di2-Sx-2q7"/>
-                                    <action selector="addButtonPressed:" destination="qBj-KU-G7p" eventType="touchUpInside" id="syj-mB-rg8"/>
-                                    <action selector="addItem:" destination="qBj-KU-G7p" eventType="touchUpInside" id="lgE-XT-EBw"/>
-                                    <action selector="addToDoItem:" destination="qBj-KU-G7p" eventType="touchUpInside" id="Fpf-WT-422"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vnc-cd-3Ly"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -220,9 +208,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIW-o7-I92" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="qBj-KU-G7p" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1047" y="-1330"/>
+            <point key="canvasLocation" x="1046.5648854961833" y="-1330.2816901408451"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="hFC-Ax-22K">
