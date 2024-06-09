@@ -17,9 +17,15 @@ class ViewControllerCL: UIViewController {
         tableView.delegate = self
     }
     
+    fileprivate func setupNavigationItem() {
+        let backItem = UIBarButtonItem(title: "Cancel", image: nil, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = backItem
+    }
+    
     @IBAction func AddButtonPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let viewCAddCL = storyboard.instantiateViewController(withIdentifier: "ViewControllerAddCL") as? ViewControllerAddCL {
+            setupNavigationItem()
             navigationController?.pushViewController(viewCAddCL, animated: true)
         }
     }
@@ -47,6 +53,8 @@ extension ViewControllerCL: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewCCI = storyboard.instantiateViewController(withIdentifier: "ViewControllerCI") as! ViewControllerCI
+        let backItem = UIBarButtonItem(title: "CheckLists", image: nil, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = backItem
         self.navigationController?.pushViewController(viewCCI, animated: true)
     }
 }
@@ -56,6 +64,7 @@ extension ViewControllerCL: TableCellButtonDelegate {
         if let _ = tableView.indexPath(for: cell) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let viewCAddCL = storyboard.instantiateViewController(withIdentifier: "ViewControllerAddCL") as? ViewControllerAddCL {
+                setupNavigationItem()
                 navigationController?.pushViewController(viewCAddCL, animated: true)
             }
         }

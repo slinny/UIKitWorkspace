@@ -1,29 +1,25 @@
-//
-//  ViewControllerAddCL.swift
-//  UIKitTable
-//
-//  Created by Siran Li on 6/6/24.
-//
-
 import UIKit
 
 class ViewControllerAddCL: UIViewController {
-
+    
+    @IBOutlet weak var itemNameTF: UITextField!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var iconView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tapGestureSelectIcon()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    fileprivate func tapGestureSelectIcon() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
+        iconView.addGestureRecognizer(tapGestureRecognizer)
     }
-    */
-
+    
+    @objc func viewTapped(_ sender: UITapGestureRecognizer) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewCPI = storyboard.instantiateViewController(withIdentifier: "ViewControllerPickIcon") as! ViewControllerPickIcon
+        navigationController?.pushViewController(viewCPI, animated: true)
+    }
 }

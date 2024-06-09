@@ -1,10 +1,3 @@
-//
-//  Calculator.swift
-//  UIKitTable
-//
-//  Created by Siran Li on 6/6/24.
-//
-
 import Foundation
 
 struct Calculator {
