@@ -6,6 +6,8 @@ class ViewControllerAddCL: UIViewController {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var iconView: UIView!
     var doneButton: UIButton!
+    var imageName: String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +39,10 @@ class ViewControllerAddCL: UIViewController {
     }
     
     fileprivate func updateDoneButtonState() {
-        print(itemNameTF.text ?? "no value")
         if let itemName = itemNameTF.text, itemName.count > 0, let _ = iconImageView.image {
-            print("can add icon")
             doneButton.setTitleColor(.systemBlue, for: .normal)
             doneButton.addTarget(self, action: #selector(doneButtonPressed(_:)), for: .touchUpInside)
         } else {
-            print("can not add icon")
             doneButton.setTitleColor(.systemGray, for: .normal)
         }
     }
@@ -56,6 +55,7 @@ class ViewControllerAddCL: UIViewController {
     @objc func doneButtonPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let viewCAddI = storyboard.instantiateViewController(withIdentifier: "ViewControllerCL") as? ViewControllerCL {
+            checkItems.append(CheckItem(imageName: imageName, title: itemNameTF.text!, status: ""))
             navigationController?.pushViewController(viewCAddI, animated: true)
         }
     }
@@ -82,6 +82,7 @@ extension ViewControllerAddCL: UITextFieldDelegate {
 extension ViewControllerAddCL: SendData {
     func sendData(_ data: String) {
         self.iconImageView.image = UIImage(systemName: data)
+        self.imageName = data
         updateDoneButtonState()
     }
 }

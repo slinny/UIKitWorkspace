@@ -29,8 +29,8 @@ struct ToDoItem {
 var toDoItems: [ToDoItem] = {
     var toDoItemList: [ToDoItem] = []
     for _ in 0..<5 {
-        toDoItems.append(ToDoItem(finished: false, itemName: "To Do Item"))
-        toDoItems.append(ToDoItem(finished: true, itemName: "To Do Item"))
+        toDoItemList.append(ToDoItem(finished: false, itemName: "To Do Item"))
+        toDoItemList.append(ToDoItem(finished: true, itemName: "To Do Item"))
     }
     return toDoItemList
 }()
