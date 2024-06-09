@@ -10,9 +10,20 @@ class ViewControllerAddCL: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        iconImageView.tintColor = .black
+        itemNameTF.delegate = self 
         tapGestureSelectIcon()
         addItemButton()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateDoneButtonState()
+    }
+    
+    deinit {
+        itemNameTF.delegate = nil 
+    }
+    
     
     fileprivate func addItemButton() {
         doneButton = UIButton(type: .custom)
@@ -22,9 +33,18 @@ class ViewControllerAddCL: UIViewController {
         let doneButtonBarItem = UIBarButtonItem(customView: doneButton)
         navigationItem.rightBarButtonItem = doneButtonBarItem
         
-        if let itemName = itemNameTF.text, itemName.count > 0, let iconImage = iconImageView.image {
+        updateDoneButtonState()
+    }
+    
+    fileprivate func updateDoneButtonState() {
+        print(itemNameTF.text ?? "no value")
+        if let itemName = itemNameTF.text, itemName.count > 0, let _ = iconImageView.image {
+            print("can add icon")
             doneButton.setTitleColor(.systemBlue, for: .normal)
             doneButton.addTarget(self, action: #selector(doneButtonPressed(_:)), for: .touchUpInside)
+        } else {
+            print("can not add icon")
+            doneButton.setTitleColor(.systemGray, for: .normal)
         }
     }
     
@@ -35,7 +55,7 @@ class ViewControllerAddCL: UIViewController {
     
     @objc func doneButtonPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewCAddI = storyboard.instantiateViewController(withIdentifier: "ViewControllerAddItem") as? ViewControllerAddItem {
+        if let viewCAddI = storyboard.instantiateViewController(withIdentifier: "ViewControllerCL") as? ViewControllerCL {
             navigationController?.pushViewController(viewCAddI, animated: true)
         }
     }
@@ -43,6 +63,25 @@ class ViewControllerAddCL: UIViewController {
     @objc func viewTapped(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewCPI = storyboard.instantiateViewController(withIdentifier: "ViewControllerPickIcon") as! ViewControllerPickIcon
+        viewCPI.delegate = self
         navigationController?.pushViewController(viewCPI, animated: true)
+    }
+}
+
+extension ViewControllerAddCL: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        updateDoneButtonState()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        updateDoneButtonState()
+    }
+}
+
+extension ViewControllerAddCL: SendData {
+    func sendData(_ data: String) {
+        self.iconImageView.image = UIImage(systemName: data)
+        updateDoneButtonState()
     }
 }

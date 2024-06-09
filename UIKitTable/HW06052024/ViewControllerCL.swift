@@ -4,14 +4,9 @@ class ViewControllerCL: UIViewController {
     
     @IBOutlet weak var AddItemButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    var checkItems = [CheckItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for _ in 0..<5 {
-            checkItems.append(CheckItem(imageName: "photo", title: "Title", status: "Status"))
-        }
         
         tableView.dataSource = self
         tableView.delegate = self

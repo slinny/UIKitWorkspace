@@ -4,15 +4,9 @@ class ViewControllerCI: UIViewController {
     
     var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    var toDoItems = [ToDoItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for _ in 0..<5 {
-            toDoItems.append(ToDoItem(finished: false, itemName: "To Do Item"))
-            toDoItems.append(ToDoItem(finished: true, itemName: "To Do Item"))
-        }
         
         tableView.dataSource = self
         tableView.delegate = self
