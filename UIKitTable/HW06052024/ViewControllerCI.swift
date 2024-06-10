@@ -14,6 +14,11 @@ class ViewControllerCI: UIViewController {
         addItemButton()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     fileprivate func addItemButton() {
         addButton = UIButton(type: .custom)
         let image = UIImage(systemName: "plus")?
@@ -23,11 +28,11 @@ class ViewControllerCI: UIViewController {
         addButton.setImage(image, for: .normal)
         addButton.addTarget(self, action: #selector(addButtonPressed(_:)), for: .touchUpInside)
         addButton.frame = CGRect(x: 300, y: 59, width: 47, height: 34)
-
+        
         let addButtonBarItem = UIBarButtonItem(customView: addButton)
         navigationItem.rightBarButtonItem = addButtonBarItem
     }
-
+    
     @objc func addButtonPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let viewCAddI = storyboard.instantiateViewController(withIdentifier: "ViewControllerAddItem") as? ViewControllerAddItem {
@@ -45,7 +50,7 @@ extension ViewControllerCI: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellCI", for: indexPath) as? TableViewCellCI else { return TableViewCellCI() }
         
-        cell.checkImageView.isHidden = !toDoItems[indexPath.row].finished
+        cell.checkbutton.imageView!.isHidden = !toDoItems[indexPath.row].finished
         cell.checkItemLabel.text = toDoItems[indexPath.row].itemName
         cell.delegate = self
         
@@ -54,11 +59,23 @@ extension ViewControllerCI: UITableViewDataSource {
 }
 
 extension ViewControllerCI: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            toDoItems.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
 
-extension ViewControllerCI: TableCellButtonDelegate {
-    func didTapButton(in cell: UITableViewCell) {
+extension ViewControllerCI: TableCellDelegate {
+    func didTapCheckButton(_ cell: TableViewCellCI) {
+        if let index = tableView.indexPath(for: cell) {
+            toDoItems[index.row].finished.toggle()
+            tableView.reloadRows(at: [index], with: .automatic)
+        }
+    }
+    
+    func didTapInfoButton(_ cell: TableViewCellCI) {
         if let _ = tableView.indexPath(for: cell) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let viewCAddI = storyboard.instantiateViewController(withIdentifier: "ViewControllerAddItem") as? ViewControllerAddItem {

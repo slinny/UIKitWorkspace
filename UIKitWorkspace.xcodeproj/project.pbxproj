@@ -14,7 +14,6 @@
 		9326CC8C2C11F91A00AD4F6B /* ViewControllerAddCL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326CC8B2C11F91A00AD4F6B /* ViewControllerAddCL.swift */; };
 		9326CC8E2C11F9A100AD4F6B /* ViewControllerAddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326CC8D2C11F9A100AD4F6B /* ViewControllerAddItem.swift */; };
 		9326CC902C11F9B800AD4F6B /* ViewControllerPickIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326CC8F2C11F9B800AD4F6B /* ViewControllerPickIcon.swift */; };
-		9326CC922C11F9D000AD4F6B /* ViewControllerPickDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326CC912C11F9D000AD4F6B /* ViewControllerPickDate.swift */; };
 		9326CC992C11FFC800AD4F6B /* ViewControllerRELogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326CC982C11FFC800AD4F6B /* ViewControllerRELogin.swift */; };
 		9326CC9D2C1200B500AD4F6B /* ViewControllerREHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326CC9C2C1200B500AD4F6B /* ViewControllerREHome.swift */; };
 		9326CC9F2C1204AB00AD4F6B /* ViewControllerREHomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326CC9E2C1204AB00AD4F6B /* ViewControllerREHomeTab.swift */; };
@@ -75,7 +74,6 @@
 		9326CC8B2C11F91A00AD4F6B /* ViewControllerAddCL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddCL.swift; sourceTree = "<group>"; };
 		9326CC8D2C11F9A100AD4F6B /* ViewControllerAddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddItem.swift; sourceTree = "<group>"; };
 		9326CC8F2C11F9B800AD4F6B /* ViewControllerPickIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPickIcon.swift; sourceTree = "<group>"; };
-		9326CC912C11F9D000AD4F6B /* ViewControllerPickDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPickDate.swift; sourceTree = "<group>"; };
 		9326CC982C11FFC800AD4F6B /* ViewControllerRELogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRELogin.swift; sourceTree = "<group>"; };
 		9326CC9C2C1200B500AD4F6B /* ViewControllerREHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerREHome.swift; sourceTree = "<group>"; };
 		9326CC9E2C1204AB00AD4F6B /* ViewControllerREHomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerREHomeTab.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 				9326CC8B2C11F91A00AD4F6B /* ViewControllerAddCL.swift */,
 				9326CC8D2C11F9A100AD4F6B /* ViewControllerAddItem.swift */,
 				9326CC8F2C11F9B800AD4F6B /* ViewControllerPickIcon.swift */,
-				9326CC912C11F9D000AD4F6B /* ViewControllerPickDate.swift */,
 				932A45E02C1589D7003AA4C7 /* TableViewCellPickIcon.swift */,
 				932A45E12C1589D7003AA4C7 /* TableViewCellPickIcon.xib */,
 				932A45E42C158FCA003AA4C7 /* Protocols.swift */,
@@ -407,7 +404,6 @@
 				9326CCA72C12053000AD4F6B /* ViewControllerREMenuTab.swift in Sources */,
 				93D41A452C121D4F0047F36D /* CollectionViewCellProperty.swift in Sources */,
 				93D41A3D2C12160A0047F36D /* CollectionViewCellServices.swift in Sources */,
-				9326CC922C11F9D000AD4F6B /* ViewControllerPickDate.swift in Sources */,
 				93D64C8F2C0FC2E7004A7D66 /* ViewControllerHeader.swift in Sources */,
 				9326CC902C11F9B800AD4F6B /* ViewControllerPickIcon.swift in Sources */,
 				93D41A432C121C010047F36D /* TableViewCellProperty.swift in Sources */,

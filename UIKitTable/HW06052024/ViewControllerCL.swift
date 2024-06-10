@@ -12,6 +12,10 @@ class ViewControllerCL: UIViewController {
         tableView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     fileprivate func setupNavigationItem() {
         let backItem = UIBarButtonItem(title: "Cancel", image: nil, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = backItem

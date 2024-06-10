@@ -15,7 +15,7 @@ class ViewControllerAddCL: UIViewController {
         iconImageView.tintColor = .black
         itemNameTF.delegate = self 
         tapGestureSelectIcon()
-        addItemButton()
+        addDoneButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,8 +26,7 @@ class ViewControllerAddCL: UIViewController {
         itemNameTF.delegate = nil 
     }
     
-    
-    fileprivate func addItemButton() {
+    fileprivate func addDoneButton() {
         doneButton = UIButton(type: .custom)
         doneButton.setTitle("Done", for: .normal)
         doneButton.setTitleColor(.systemGray, for: .normal)
@@ -53,11 +52,8 @@ class ViewControllerAddCL: UIViewController {
     }
     
     @objc func doneButtonPressed(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewCAddI = storyboard.instantiateViewController(withIdentifier: "ViewControllerCL") as? ViewControllerCL {
-            checkItems.append(CheckItem(imageName: imageName, title: itemNameTF.text!, status: ""))
-            navigationController?.pushViewController(viewCAddI, animated: true)
-        }
+        checkItems.append(CheckItem(imageName: imageName, title: itemNameTF.text!, status: ""))
+        navigationController?.popViewController(animated: true)
     }
     
     @objc func viewTapped(_ sender: UITapGestureRecognizer) {

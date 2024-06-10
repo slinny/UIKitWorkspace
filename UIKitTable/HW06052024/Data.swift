@@ -1,10 +1,3 @@
-//
-//  Data.swift
-//  UIKitTable
-//
-//  Created by Siran Li on 6/5/24.
-//
-
 import Foundation
 
 struct CheckItem {
