@@ -19,6 +19,10 @@ class ViewControllerREHomeTab: UIViewController {
         tableView.separatorStyle = .none
     }
     
+    
+}
+
+extension ViewControllerREHomeTab {
     func customizeSearchBar() {
         searchBar.backgroundImage = UIImage()
         
@@ -68,11 +72,21 @@ extension ViewControllerREHomeTab: UITableViewDataSource{
             return cell
         } else if indexPath.section == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellRegister", for: indexPath) as? TableViewCellRegister else { return TableViewCellRegister() }
+            cell.delegate = self
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellProperty", for: indexPath) as? TableViewCellProperty else { return TableViewCellProperty() }
             return cell
         }
+    }
+}
+
+extension ViewControllerREHomeTab: GetStartedButtonDelegate {
+    func didTapGetStartedButton(in cell: UITableViewCell) {
+        print("get started tapped!")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewCRELogin = storyboard.instantiateViewController(withIdentifier: "ViewControllerRELogin") as! ViewControllerRELogin
+        navigationController?.pushViewController(viewCRELogin, animated: true)
     }
 }
 

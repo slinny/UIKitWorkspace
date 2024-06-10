@@ -37,5 +37,3 @@ struct Property {
     var numberOfBathrooms: Int
     var address: String
 }
-
-

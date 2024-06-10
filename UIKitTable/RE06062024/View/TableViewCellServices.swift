@@ -1,10 +1,3 @@
-//
-//  TableViewCellServices.swift
-//  UIKitTable
-//
-//  Created by Siran Li on 6/6/24.
-//
-
 import UIKit
 
 class TableViewCellServices: UITableViewCell {
@@ -33,6 +26,9 @@ extension TableViewCellServices: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCellServices", for: indexPath) as? CollectionViewCellServices else { return CollectionViewCellServices() }
+        
+        cell.serviceImageView.image = UIImage(systemName: DataRE.services[indexPath.row].imageName)
+        cell.serviceLabel.text = DataRE.services[indexPath.row].title
         
         cell.layer.borderWidth = 0.5
         cell.layer.borderColor = UIColor.systemGray.cgColor

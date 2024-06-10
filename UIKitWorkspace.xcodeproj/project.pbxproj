@@ -26,11 +26,16 @@
 		932A45E52C158FCA003AA4C7 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A45E42C158FCA003AA4C7 /* Protocols.swift */; };
 		935228B52C113CC900C566B8 /* ViewControllerCL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935228B42C113CC900C566B8 /* ViewControllerCL.swift */; };
 		937C23C82C10AEF500FAFEE6 /* ViewControllerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937C23C72C10AEF500FAFEE6 /* ViewControllerEnum.swift */; };
+		937F51852C1745D600D95449 /* ModifierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F51842C1745D600D95449 /* ModifierViewController.swift */; };
+		937F51872C17498400D95449 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F51862C17498400D95449 /* Modifiers.swift */; };
 		938FF9F12C13932600520704 /* FizzBuzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FF9F02C13932600520704 /* FizzBuzz.swift */; };
 		938FF9F32C13954100520704 /* FizzBuzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FF9F22C13954100520704 /* FizzBuzzTests.swift */; };
 		938FF9F62C1399AF00520704 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FF9F52C1399AF00520704 /* RegisterViewController.swift */; };
 		938FF9F82C13A2B100520704 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FF9F72C13A2B100520704 /* SecondViewController.swift */; };
 		938FF9FA2C13A76F00520704 /* RegisterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FF9F92C13A76F00520704 /* RegisterViewControllerTests.swift */; };
+		939E90862C17861F00808199 /* TableViewCellLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 939E90842C17861F00808199 /* TableViewCellLogin.xib */; };
+		939E908D2C1795AF00808199 /* SecondNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939E908C2C1795AF00808199 /* SecondNavViewController.swift */; };
+		939E908F2C1795FA00808199 /* FirstNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939E908E2C1795FA00808199 /* FirstNavViewController.swift */; };
 		93C6DA792C08BBFA00BC5E16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6DA782C08BBFA00BC5E16 /* AppDelegate.swift */; };
 		93C6DA7B2C08BBFA00BC5E16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6DA7A2C08BBFA00BC5E16 /* SceneDelegate.swift */; };
 		93C6DA7D2C08BBFA00BC5E16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6DA7C2C08BBFA00BC5E16 /* ViewController.swift */; };
@@ -86,11 +91,16 @@
 		932A45E42C158FCA003AA4C7 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		935228B42C113CC900C566B8 /* ViewControllerCL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCL.swift; sourceTree = "<group>"; };
 		937C23C72C10AEF500FAFEE6 /* ViewControllerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEnum.swift; sourceTree = "<group>"; };
+		937F51842C1745D600D95449 /* ModifierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierViewController.swift; sourceTree = "<group>"; };
+		937F51862C17498400D95449 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		938FF9F02C13932600520704 /* FizzBuzz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzz.swift; sourceTree = "<group>"; };
 		938FF9F22C13954100520704 /* FizzBuzzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzTests.swift; sourceTree = "<group>"; };
 		938FF9F52C1399AF00520704 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		938FF9F72C13A2B100520704 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		938FF9F92C13A76F00520704 /* RegisterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerTests.swift; sourceTree = "<group>"; };
+		939E90842C17861F00808199 /* TableViewCellLogin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellLogin.xib; sourceTree = "<group>"; };
+		939E908C2C1795AF00808199 /* SecondNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNavViewController.swift; sourceTree = "<group>"; };
+		939E908E2C1795FA00808199 /* FirstNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNavViewController.swift; sourceTree = "<group>"; };
 		93C6DA752C08BBFA00BC5E16 /* UIKitTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C6DA782C08BBFA00BC5E16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C6DA7A2C08BBFA00BC5E16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,19 +150,9 @@
 		9326CC932C11FEB800AD4F6B /* RE06062024 */ = {
 			isa = PBXGroup;
 			children = (
-				9326CC9C2C1200B500AD4F6B /* ViewControllerREHome.swift */,
-				9326CC982C11FFC800AD4F6B /* ViewControllerRELogin.swift */,
-				9326CC9E2C1204AB00AD4F6B /* ViewControllerREHomeTab.swift */,
-				9326CCA02C1204BD00AD4F6B /* ViewControllerREFavTab.swift */,
-				9326CCA22C12050F00AD4F6B /* ViewControllerREAddTab.swift */,
-				9326CCA42C12052000AD4F6B /* ViewControllerREChatTab.swift */,
-				9326CCA62C12053000AD4F6B /* ViewControllerREMenuTab.swift */,
-				93D41A3E2C121B430047F36D /* TableViewCellServices.swift */,
-				93D41A402C121BEA0047F36D /* TableViewCellRegister.swift */,
-				93D41A422C121C010047F36D /* TableViewCellProperty.swift */,
-				93D41A3C2C12160A0047F36D /* CollectionViewCellServices.swift */,
-				93D41A442C121D4F0047F36D /* CollectionViewCellProperty.swift */,
-				93D41A462C122CE50047F36D /* DataRE.swift */,
+				939E90822C1768F900808199 /* Controller */,
+				939E90812C1768E900808199 /* Model */,
+				939E90802C1768E000808199 /* View */,
 			);
 			path = RE06062024;
 			sourceTree = "<group>";
@@ -203,6 +203,15 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		937F51832C1745B200D95449 /* Modifiers06102024 */ = {
+			isa = PBXGroup;
+			children = (
+				937F51842C1745D600D95449 /* ModifierViewController.swift */,
+				937F51862C17498400D95449 /* Modifiers.swift */,
+			);
+			path = Modifiers06102024;
+			sourceTree = "<group>";
+		};
 		938FF9F42C13998100520704 /* LoginValidation */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +219,50 @@
 				938FF9F72C13A2B100520704 /* SecondViewController.swift */,
 			);
 			path = LoginValidation;
+			sourceTree = "<group>";
+		};
+		939E90802C1768E000808199 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93D41A442C121D4F0047F36D /* CollectionViewCellProperty.swift */,
+				93D41A422C121C010047F36D /* TableViewCellProperty.swift */,
+				93D41A402C121BEA0047F36D /* TableViewCellRegister.swift */,
+				93D41A3E2C121B430047F36D /* TableViewCellServices.swift */,
+				93D41A3C2C12160A0047F36D /* CollectionViewCellServices.swift */,
+				939E90842C17861F00808199 /* TableViewCellLogin.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		939E90812C1768E900808199 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93D41A462C122CE50047F36D /* DataRE.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		939E90822C1768F900808199 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9326CCA22C12050F00AD4F6B /* ViewControllerREAddTab.swift */,
+				9326CCA42C12052000AD4F6B /* ViewControllerREChatTab.swift */,
+				9326CCA02C1204BD00AD4F6B /* ViewControllerREFavTab.swift */,
+				9326CC9C2C1200B500AD4F6B /* ViewControllerREHome.swift */,
+				9326CC9E2C1204AB00AD4F6B /* ViewControllerREHomeTab.swift */,
+				9326CC982C11FFC800AD4F6B /* ViewControllerRELogin.swift */,
+				9326CCA62C12053000AD4F6B /* ViewControllerREMenuTab.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		939E90872C178FBF00808199 /* NavClosure */ = {
+			isa = PBXGroup;
+			children = (
+				939E908C2C1795AF00808199 /* SecondNavViewController.swift */,
+				939E908E2C1795FA00808199 /* FirstNavViewController.swift */,
+			);
+			path = NavClosure;
 			sourceTree = "<group>";
 		};
 		93C6DA6C2C08BBFA00BC5E16 = {
@@ -233,6 +286,8 @@
 		93C6DA772C08BBFA00BC5E16 /* UIKitTable */ = {
 			isa = PBXGroup;
 			children = (
+				939E90872C178FBF00808199 /* NavClosure */,
+				937F51832C1745B200D95449 /* Modifiers06102024 */,
 				938FF9F42C13998100520704 /* LoginValidation */,
 				93D41A482C125FBA0047F36D /* Testing06062024 */,
 				9326CC932C11FEB800AD4F6B /* RE06062024 */,
@@ -365,6 +420,7 @@
 				93C6DA822C08BBFB00BC5E16 /* Assets.xcassets in Resources */,
 				93C6DA852C08BBFB00BC5E16 /* Base in Resources */,
 				932A45E22C1589D7003AA4C7 /* TableViewCellPickIcon.xib in Resources */,
+				939E90862C17861F00808199 /* TableViewCellLogin.xib in Resources */,
 				93C6DA802C08BBFA00BC5E16 /* Base in Resources */,
 				93C6DA942C08D2BF00BC5E16 /* TableViewCellContent.xib in Resources */,
 			);
@@ -384,12 +440,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				939E908D2C1795AF00808199 /* SecondNavViewController.swift in Sources */,
 				93D41A412C121BEA0047F36D /* TableViewCellRegister.swift in Sources */,
 				93D41A572C1261800047F36D /* ViewControllerTesting.swift in Sources */,
 				93C6DA952C08D2BF00BC5E16 /* TableViewCellContent.swift in Sources */,
 				93D64C912C0FC354004A7D66 /* HeaderTableViewCell.swift in Sources */,
 				9326CC9F2C1204AB00AD4F6B /* ViewControllerREHomeTab.swift in Sources */,
 				93D41A472C122CE50047F36D /* DataRE.swift in Sources */,
+				937F51872C17498400D95449 /* Modifiers.swift in Sources */,
 				932A45E32C1589D7003AA4C7 /* TableViewCellPickIcon.swift in Sources */,
 				9326CC9D2C1200B500AD4F6B /* ViewControllerREHome.swift in Sources */,
 				93C6DA7D2C08BBFA00BC5E16 /* ViewController.swift in Sources */,
@@ -421,8 +479,10 @@
 				93C6DA992C090B3700BC5E16 /* ViewControllerC.swift in Sources */,
 				93D41A3F2C121B430047F36D /* TableViewCellServices.swift in Sources */,
 				931E6F202C1163BF00121870 /* ViewControllerCI.swift in Sources */,
+				937F51852C1745D600D95449 /* ModifierViewController.swift in Sources */,
 				93D64C932C0FC3D9004A7D66 /* MockData.swift in Sources */,
 				931E6F222C11684100121870 /* TableViewCellCI.swift in Sources */,
+				939E908F2C1795FA00808199 /* FirstNavViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
