@@ -3,7 +3,7 @@ import UIKit
 class ViewControllerPickIcon: UIViewController {
     
     @IBOutlet weak var iconTableView: UITableView!
-    var delegate: SendData?
+    private var delegate: SendString?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,13 @@ extension ViewControllerPickIcon: UITableViewDataSource {
 
 extension ViewControllerPickIcon: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.sendData(icons[indexPath.row].iconImage)
+        delegate?.sendString(icons[indexPath.row].iconImage)
         navigationController?.popViewController(animated: true)
+    }
+}
+
+extension ViewControllerPickIcon {
+    func setDelegate(_ delegate: SendString?) {
+        self.delegate = delegate
     }
 }

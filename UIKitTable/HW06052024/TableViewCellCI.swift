@@ -7,7 +7,7 @@ class TableViewCellCI: UITableViewCell {
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var rightImageView: UIImageView!
     
-    weak var delegate: TableCellDelegate?
+    private weak var delegate: TableCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +25,12 @@ class TableViewCellCI: UITableViewCell {
     
     @IBAction func infoButtonPressed(_ sender: Any) {
         delegate?.didTapInfoButton(self)
+    }
+}
+
+extension TableViewCellCI {
+    func setDelegate(_ delegate: TableCellDelegate) {
+        self.delegate = delegate
     }
 }
 

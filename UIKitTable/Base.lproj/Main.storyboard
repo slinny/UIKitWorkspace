@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JPK-We-ant">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CAb-KM-NWS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -66,8 +66,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="iconView" destination="M2Q-3J-NFQ" id="clq-iT-q7u"/>
                                             <outlet property="infoButton" destination="d87-vA-7YJ" id="4hY-by-Yb5"/>
-                                            <outlet property="itemImageView" destination="M2Q-3J-NFQ" id="clq-iT-q7u"/>
                                             <outlet property="rightImageView" destination="Yxi-mT-SuF" id="O9z-zx-mpT"/>
                                             <outlet property="statusLabel" destination="VDV-51-nJM" id="nbA-qC-3sL"/>
                                             <outlet property="titleLabel" destination="C1o-dT-piH" id="1VK-G1-RGf"/>
@@ -503,6 +503,7 @@
                     <connections>
                         <outlet property="datepicker" destination="tFq-E8-THn" id="3u1-4O-wZM"/>
                         <outlet property="itemNameTF" destination="SHX-lJ-aW3" id="Xxe-L7-twV"/>
+                        <outlet property="reminderSwitch" destination="SCU-6q-xGx" id="Osy-4u-PKT"/>
                         <outlet property="reminderView" destination="z3E-oG-1vY" id="n89-vu-j8Z"/>
                     </connections>
                 </viewController>

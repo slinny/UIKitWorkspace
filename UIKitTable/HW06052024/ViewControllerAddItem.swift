@@ -4,11 +4,18 @@ class ViewControllerAddItem: UIViewController {
     
     @IBOutlet weak var itemNameTF: UITextField!
     @IBOutlet weak var reminderView: UIView!
+    @IBOutlet weak var reminderSwitch: UISwitch!
     @IBOutlet weak var datepicker: UIDatePicker!
-    var doneButton: UIButton!
+    private var doneButton: UIButton!
+    
+    private var checkItemIndex: Int = 0
+    private var toDoItems: [TodoItem] = []
+    private var delegate: SendInt?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        toDoItems = checkItems[checkItemIndex].todos
         
         itemNameTF.delegate = self
         reminderView.addBottomBorder(with: .systemGray5, thickness: 2.0)
@@ -17,6 +24,39 @@ class ViewControllerAddItem: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         updateDoneButtonState()
+    }
+    
+    @objc func doneButtonPressed(_ sender: UIButton) {
+        updateCheckItems()
+        navigationController?.popViewController(animated: true)
+    }
+}
+
+extension ViewControllerAddItem: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        updateDoneButtonState()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        updateDoneButtonState()
+    }
+}
+
+extension ViewControllerAddItem {
+    fileprivate func updateCheckItems() {
+        toDoItems.append(TodoItem(finished: false, name: itemNameTF.text!, reminder: reminderSwitch.isOn, dueDate: datepicker.date))
+        checkItems[checkItemIndex].todos = toDoItems
+        checkItems[checkItemIndex].remaining = toDoItems.filter{ !($0.finished) }.count
+        delegate?.sendInt(checkItemIndex)
+    }
+    
+    func setCheckItemIndex(_ index: Int) {
+        self.checkItemIndex = index
+    }
+    
+    func setCheckDelegate(_ delegate: SendInt) {
+        self.delegate = delegate
     }
     
     fileprivate func addDoneButton() {
@@ -35,23 +75,6 @@ class ViewControllerAddItem: UIViewController {
         } else {
             doneButton.setTitleColor(.systemGray, for: .normal)
         }
-    }
-    
-    @objc func doneButtonPressed(_ sender: UIButton) {
-        toDoItems.append(ToDoItem(finished: false, itemName: itemNameTF.text!))
-        print(toDoItems.count)
-        navigationController?.popViewController(animated: true)
-    }
-}
-
-extension ViewControllerAddItem: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        updateDoneButtonState()
-        return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        updateDoneButtonState()
     }
 }
 

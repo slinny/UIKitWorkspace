@@ -16,19 +16,9 @@ class ViewControllerCL: UIViewController {
         tableView.reloadData()
     }
     
-    fileprivate func setupNavigationItem() {
-        let backItem = UIBarButtonItem(title: "Cancel", image: nil, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem = backItem
-    }
-    
     @IBAction func AddButtonPressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewCAddCL = storyboard.instantiateViewController(withIdentifier: "ViewControllerAddCL") as? ViewControllerAddCL {
-            setupNavigationItem()
-            navigationController?.pushViewController(viewCAddCL, animated: true)
-        }
+        goToAddList()
     }
-    
 }
 
 extension ViewControllerCL: UITableViewDataSource {
@@ -39,10 +29,17 @@ extension ViewControllerCL: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellCL", for: indexPath) as? TableViewCellCL else { return TableViewCell() }
         
-        cell.itemImageView.image = UIImage(systemName: checkItems[indexPath.row].imageName)
+        cell.iconView.image = UIImage(systemName: checkItems[indexPath.row].icon)
         cell.titleLabel.text = checkItems[indexPath.row].title
-        cell.statusLabel.text = checkItems[indexPath.row].status
-        cell.delegate = self
+        if checkItems[indexPath.row].remaining > 0 {
+            cell.statusLabel.text = "\(checkItems[indexPath.row].remaining) Remaining"
+        } else if checkItems[indexPath.row].todos.count > 0 {
+            cell.statusLabel.text = "All Done!"
+        } else {
+            cell.statusLabel.text = "(No Items)"
+        }
+        
+        cell.setDelegate(self)
         
         return cell
     }
@@ -54,6 +51,7 @@ extension ViewControllerCL: UITableViewDelegate {
         let viewCCI = storyboard.instantiateViewController(withIdentifier: "ViewControllerCI") as! ViewControllerCI
         let backItem = UIBarButtonItem(title: "CheckLists", image: nil, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = backItem
+        viewCCI.setCheckItemIndex(indexPath.row)
         self.navigationController?.pushViewController(viewCCI, animated: true)
     }
     
@@ -68,11 +66,22 @@ extension ViewControllerCL: UITableViewDelegate {
 extension ViewControllerCL: TableCellButtonDelegate {
     func didTapButton(in cell: UITableViewCell) {
         if let _ = tableView.indexPath(for: cell) {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let viewCAddCL = storyboard.instantiateViewController(withIdentifier: "ViewControllerAddCL") as? ViewControllerAddCL {
-                setupNavigationItem()
-                navigationController?.pushViewController(viewCAddCL, animated: true)
-            }
+            goToAddList()
         }
+    }
+}
+
+extension ViewControllerCL {
+    fileprivate func goToAddList() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewCAddCL = storyboard.instantiateViewController(withIdentifier: "ViewControllerAddCL") as? ViewControllerAddCL {
+            setupNavigationItem()
+            navigationController?.pushViewController(viewCAddCL, animated: true)
+        }
+    }
+    
+    fileprivate func setupNavigationItem() {
+        let backItem = UIBarButtonItem(title: "Cancel", image: nil, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = backItem
     }
 }
