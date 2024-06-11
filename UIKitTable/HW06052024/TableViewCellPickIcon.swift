@@ -1,10 +1,3 @@
-//
-//  TableViewCellPickIcon.swift
-//  UIKitTable
-//
-//  Created by Siran Li on 6/9/24.
-//
-
 import UIKit
 
 class TableViewCellPickIcon: UITableViewCell {
