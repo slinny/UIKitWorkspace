@@ -1,15 +1,15 @@
 import UIKit
 
-class TableViewCellPickIcon: UITableViewCell {
+class ToDoTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var iconNameLabel: UILabel!
+    @IBOutlet weak var userIDLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var completedLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        iconImageView.tintColor = .black
-        
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
