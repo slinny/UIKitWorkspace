@@ -63,6 +63,11 @@
 		93D64C8F2C0FC2E7004A7D66 /* ViewControllerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D64C8E2C0FC2E7004A7D66 /* ViewControllerHeader.swift */; };
 		93D64C912C0FC354004A7D66 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D64C902C0FC354004A7D66 /* HeaderTableViewCell.swift */; };
 		93D64C932C0FC3D9004A7D66 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D64C922C0FC3D9004A7D66 /* MockData.swift */; };
+		93E895922C193EB400B8EEBA /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E895902C193EB400B8EEBA /* RecordTableViewCell.swift */; };
+		93E895932C193EB400B8EEBA /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E895912C193EB400B8EEBA /* RecordTableViewCell.xib */; };
+		93F9DD272C18F53800786AFE /* APICallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9DD262C18F53800786AFE /* APICallViewController.swift */; };
+		93F9DD292C18F56400786AFE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9DD282C18F56400786AFE /* APIManager.swift */; };
+		93F9DD2B2C18F60300786AFE /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9DD2A2C18F60300786AFE /* RecordModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +140,11 @@
 		93D64C8E2C0FC2E7004A7D66 /* ViewControllerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHeader.swift; sourceTree = "<group>"; };
 		93D64C902C0FC354004A7D66 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		93D64C922C0FC3D9004A7D66 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		93E895902C193EB400B8EEBA /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		93E895912C193EB400B8EEBA /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
+		93F9DD262C18F53800786AFE /* APICallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallViewController.swift; sourceTree = "<group>"; };
+		93F9DD282C18F56400786AFE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		93F9DD2A2C18F60300786AFE /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +202,18 @@
 				932A45E42C158FCA003AA4C7 /* Protocols.swift */,
 			);
 			path = HW06052024;
+			sourceTree = "<group>";
+		};
+		935865752C18DC3C0048CEF8 /* APIRequest */ = {
+			isa = PBXGroup;
+			children = (
+				93F9DD262C18F53800786AFE /* APICallViewController.swift */,
+				93F9DD282C18F56400786AFE /* APIManager.swift */,
+				93F9DD2A2C18F60300786AFE /* RecordModel.swift */,
+				93E895902C193EB400B8EEBA /* RecordTableViewCell.swift */,
+				93E895912C193EB400B8EEBA /* RecordTableViewCell.xib */,
+			);
+			path = APIRequest;
 			sourceTree = "<group>";
 		};
 		937C23C02C10A44700FAFEE6 /* TableViewFold */ = {
@@ -305,12 +327,8 @@
 		93C6DA772C08BBFA00BC5E16 /* UIKitTable */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< Updated upstream
-				9338CF872C19F0D200A286A2 /* ToDoAPI */,
-=======
 				9338CF932C1A2AF500A286A2 /* ToDoAPI */,
 				935865752C18DC3C0048CEF8 /* APIRequest */,
->>>>>>> Stashed changes
 				939E90872C178FBF00808199 /* NavClosure */,
 				937F51832C1745B200D95449 /* Modifiers06102024 */,
 				938FF9F42C13998100520704 /* LoginValidation */,
@@ -446,6 +464,7 @@
 				9338CF8B2C19F11D00A286A2 /* ToDoTableViewCell.xib in Resources */,
 				93C6DA852C08BBFB00BC5E16 /* Base in Resources */,
 				932A45E22C1589D7003AA4C7 /* TableViewCellPickIcon.xib in Resources */,
+				93E895932C193EB400B8EEBA /* RecordTableViewCell.xib in Resources */,
 				939E90862C17861F00808199 /* TableViewCellLogin.xib in Resources */,
 				93C6DA802C08BBFA00BC5E16 /* Base in Resources */,
 				93C6DA942C08D2BF00BC5E16 /* TableViewCellContent.xib in Resources */,
@@ -486,11 +505,12 @@
 				932A45E52C158FCA003AA4C7 /* Protocols.swift in Sources */,
 				9326CCA52C12052000AD4F6B /* ViewControllerREChatTab.swift in Sources */,
 				9326CCA72C12053000AD4F6B /* ViewControllerREMenuTab.swift in Sources */,
-				9338CF8F2C19F13B00A286A2 /* ToDoAPIManager.swift in Sources */,
+				93F9DD292C18F56400786AFE /* APIManager.swift in Sources */,
 				93D41A452C121D4F0047F36D /* CollectionViewCellProperty.swift in Sources */,
 				93D41A3D2C12160A0047F36D /* CollectionViewCellServices.swift in Sources */,
 				93D64C8F2C0FC2E7004A7D66 /* ViewControllerHeader.swift in Sources */,
 				9326CC902C11F9B800AD4F6B /* ViewControllerPickIcon.swift in Sources */,
+				93E895922C193EB400B8EEBA /* RecordTableViewCell.swift in Sources */,
 				93D41A432C121C010047F36D /* TableViewCellProperty.swift in Sources */,
 				938FF9F82C13A2B100520704 /* SecondViewController.swift in Sources */,
 				931E6F1C2C11604800121870 /* Data.swift in Sources */,
@@ -503,6 +523,8 @@
 				9326CC8C2C11F91A00AD4F6B /* ViewControllerAddCL.swift in Sources */,
 				937C23C82C10AEF500FAFEE6 /* ViewControllerEnum.swift in Sources */,
 				93C6DA7B2C08BBFA00BC5E16 /* SceneDelegate.swift in Sources */,
+				93F9DD272C18F53800786AFE /* APICallViewController.swift in Sources */,
+				93F9DD2B2C18F60300786AFE /* RecordModel.swift in Sources */,
 				93C6DA992C090B3700BC5E16 /* ViewControllerC.swift in Sources */,
 				93D41A3F2C121B430047F36D /* TableViewCellServices.swift in Sources */,
 				931E6F202C1163BF00121870 /* ViewControllerCI.swift in Sources */,

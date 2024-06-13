@@ -51,28 +51,3 @@ extension APICallViewController {
         }
     }
 }
-
-/*
- here is the structure for you app :
- 1. model in Model folder
-
- 2. Storyboard and uitableviewcell in View folder
-
- 3. Calling api and fetching the data it should be in Network folder
-
- 4. Viewcontrollers should be in Controller folder
-
- 5. all constants like URL , and other details which may include screen title and button title etc needs to be in other folder called Common ( where you can create a Constant file and add all these details )
-
- Constraints should be applied correctly , no code copy from internet
-
- whereever possible try to use Enum and no hard coded value is allowed
-
- appllication name should be : iTuneArtists
-
- application version : 1.0
-
- build number should be : 1.0
-
- bundle identifier should be : com.youname.development.appname
- */
