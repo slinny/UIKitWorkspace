@@ -12,7 +12,7 @@
 
 import UIKit
 
-enum College {
+enum College: CaseIterable {
     case studentName
     case collegaName
     case id
@@ -81,7 +81,7 @@ class ViewControllerEnum: UIViewController {
     }
     
     func withoutType() {
-        let collegeDetail = College.studentName
+        let collegeDetail = College.allCases.randomElement()!
         
         switch collegeDetail {
         case .collegaName:
