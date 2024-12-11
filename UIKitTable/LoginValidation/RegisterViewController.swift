@@ -16,7 +16,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        let textField = UITextField()
     }
     
     func validateUsername(_ username: String?) -> Bool {

@@ -3,26 +3,20 @@ import XCTest
 
 final class CalculatorTests: XCTestCase {
 
-    var calculator: Calculator?
+    var calculator: Calculator!
     
     override func setUpWithError() throws {
+        super.setUp()
         calculator = Calculator()
     }
 
     override func tearDownWithError() throws {
-    
+        calculator = nil
+        super.tearDown()
     }
 
-    func testExample() throws {
-        let total = calculator?.sum(1, 2)
-        XCTAssertEqual(3, total)
+    func testAdd() throws {
+        let total = calculator.add(num1: 10.1, num2: 5)
+        XCTAssertEqual(total, 15.1)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

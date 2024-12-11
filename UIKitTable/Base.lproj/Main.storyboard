@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YPs-M3-bX2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QDb-UL-v6J">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -307,6 +307,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHd-yg-xT4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2415" y="-1996"/>
+        </scene>
+        <!--WebViewController-->
+        <scene sceneID="nGQ-fF-KM3">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" title="WebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1eK-N9-g3l" customClass="WebViewController" customModule="UIKitTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y9s-Po-XhH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6oQ-yN-KCL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8MM-65-gFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="-1996"/>
+        </scene>
+        <!--SegmentViewController-->
+        <scene sceneID="owx-Pa-EYz">
+            <objects>
+                <viewController storyboardIdentifier="SegmentViewController" title="SegmentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2qq-uN-Ss2" customClass="SegmentViewController" customModule="UIKitTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iOV-QH-wHx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="n5R-lR-76l">
+                                <rect key="frame" x="100" y="118" width="193" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sLq-a7-j9e"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SegmentLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nq-r2-oej">
+                                <rect key="frame" x="50" y="198" width="293" height="520"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xs3-0f-1N0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n5R-lR-76l" firstAttribute="top" secondItem="Xs3-0f-1N0" secondAttribute="top" constant="59" id="7Nk-uf-2ng"/>
+                            <constraint firstItem="n5R-lR-76l" firstAttribute="leading" secondItem="Xs3-0f-1N0" secondAttribute="leading" constant="100" id="DGw-QF-1kj"/>
+                            <constraint firstItem="Xs3-0f-1N0" firstAttribute="bottom" secondItem="0Nq-r2-oej" secondAttribute="bottom" constant="100" id="Pma-ve-UuM"/>
+                            <constraint firstItem="0Nq-r2-oej" firstAttribute="top" secondItem="n5R-lR-76l" secondAttribute="bottom" constant="50" id="TjC-Ns-dzT"/>
+                            <constraint firstItem="Xs3-0f-1N0" firstAttribute="trailing" secondItem="n5R-lR-76l" secondAttribute="trailing" constant="100" id="UrU-tZ-51V"/>
+                            <constraint firstItem="Xs3-0f-1N0" firstAttribute="trailing" secondItem="0Nq-r2-oej" secondAttribute="trailing" constant="50" id="gl1-6Q-VCB"/>
+                            <constraint firstItem="0Nq-r2-oej" firstAttribute="leading" secondItem="Xs3-0f-1N0" secondAttribute="leading" constant="50" id="kwD-cH-OCv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentLabel" destination="0Nq-r2-oej" id="45k-8M-tHD"/>
+                        <outlet property="segments" destination="n5R-lR-76l" id="mbf-fL-ZSO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIN-1l-OrJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-921.37404580152668" y="-1330.2816901408451"/>
+        </scene>
+        <!--AlertViewController-->
+        <scene sceneID="KJw-he-iwh">
+            <objects>
+                <viewController storyboardIdentifier="AlertViewController" title="AlertViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mcA-2c-0jB" customClass="AlertViewController" customModule="UIKitTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZS-oX-lTR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tkk-wD-70c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Udi-Cs-k4y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="-1330"/>
         </scene>
         <!--To Do-->
         <scene sceneID="wcU-zb-TBn">
@@ -737,7 +813,7 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="building.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yag-zA-ip4">
-                                                                        <rect key="frame" x="30" y="10.333333333333332" width="40" height="39.666666666666671"/>
+                                                                        <rect key="frame" x="30" y="9.3333333333333321" width="40" height="41.333333333333343"/>
                                                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="40" id="0Un-NA-1M6"/>
@@ -1697,6 +1773,21 @@
             </objects>
             <point key="canvasLocation" x="1122.9007633587785" y="1496.4788732394368"/>
         </scene>
+        <!--SearchViewController-->
+        <scene sceneID="sLT-e1-NU4">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" title="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QDb-UL-v6J" customClass="SearchViewController" customModule="UIKitTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qPx-da-a8t">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xvB-4r-TYV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yrN-L9-KU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-921" y="-2680"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="bo3-Qv-gqh">
             <objects>
@@ -1715,12 +1806,44 @@
             </objects>
             <point key="canvasLocation" x="-538.16793893129773" y="769.71830985915494"/>
         </scene>
+        <!--MultilineLabelViewController-->
+        <scene sceneID="voN-PM-tCo">
+            <objects>
+                <viewController storyboardIdentifier="MultilineLabelViewController" title="MultilineLabelViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6AS-vq-fCl" customClass="MultilineLabelViewController" customModule="UIKitTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Brc-GO-wEc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yf-ZO-Hxh">
+                                <rect key="frame" x="50" y="109" width="293" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="1R6-c6-cCH"/>
+                                </constraints>
+                                <string key="text">During the 19th century, several small-scale sports festivals across Europe were named after the Ancient Olympic Games. The 1870 Olympics at the Panathenaic stadium, which had been refurbished for the occasion, had an audience of 30,000 people.[5]: 43–44  Pierre de Coubertin, a French pedagogue and historian, adopted William Penny Brookes' idea to establish a multi-national and multi-sport event—the ancient games only allowed male athletes of Greek origin to participate.[6][7] In 1890, Coubertin wrote an article in La Revue Athletique, which espoused the importance of Much Wenlock, a rural market town in the English county of Shropshire. It was here that, in October 1850, the local physician William Penny Brookes founded the Wenlock Olympian Games, a festival of sports and recreations that included athletics and team sports, such as cricket, football and quoits.[8] Coubertin also took inspiration from the earlier Greek games organised under the name of Olympics by businessman and philanthropist Evangelis Zappas in 1859, 1870 and 1875.[9] The 1896 Athens Games were funded by the legacies of Evangelis Zappas and his cousin Konstantinos Zappas[5]: 117 [10][11] and by George Averoff[5]: 128  who had been specifically requested by the Greek government, through crown prince Constantine, to sponsor the second refurbishment of the Panathenaic Stadium. The Greek government did this despite the cost of refurbishing the stadium in marble already being funded in full by Evangelis Zappas forty years earlier.[5]: 14 </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PL0-Ao-xUj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PL0-Ao-xUj" firstAttribute="trailing" secondItem="1yf-ZO-Hxh" secondAttribute="trailing" constant="50" id="XdV-e2-XdD"/>
+                            <constraint firstItem="1yf-ZO-Hxh" firstAttribute="top" secondItem="PL0-Ao-xUj" secondAttribute="top" constant="50" id="mpw-Zg-3LU"/>
+                            <constraint firstItem="1yf-ZO-Hxh" firstAttribute="leading" secondItem="PL0-Ao-xUj" secondAttribute="leading" constant="50" id="zbG-XP-Cel"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSP-Wc-v2K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-921" y="-1996"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="bell" catalog="system" width="125" height="128"/>
         <image name="book" catalog="system" width="128" height="99"/>
-        <image name="building.2" catalog="system" width="128" height="108"/>
+        <image name="building.2" catalog="system" width="120" height="128"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="124"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
