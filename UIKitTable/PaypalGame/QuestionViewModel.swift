@@ -1,6 +1,14 @@
+//
+//  QuestionViewModel.swift
+//  UIKitWorkspace
+//
+//  Created by Siran Li on 12/15/24.
+//
+
+
 import Foundation
 
-class QuestionViewModel: ObservableObject {
+class QuestionViewModel  {
     @Published var questions : [Question] = []
     @Published var score: Int = 0
     @Published var index: Int = 0
@@ -15,9 +23,6 @@ class QuestionViewModel: ObservableObject {
         if answer == questions[index].correctAnswer {
             score += 10
         }
-    }
-    
-    func updateIndex() {
         index += 1
     }
     
