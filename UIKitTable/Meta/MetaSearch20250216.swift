@@ -55,6 +55,7 @@
          resultTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
          resultTable.translatesAutoresizingMaskIntoConstraints = false
          searchField.translatesAutoresizingMaskIntoConstraints = false
+         searchField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
          NSLayoutConstraint.activate([
              searchField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
              searchField.leadingAnchor.constraint(equalTo: view.leadingAnchor),
