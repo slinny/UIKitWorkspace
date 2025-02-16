@@ -12,6 +12,8 @@ class CGContainsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
+        
         let rect1 = CGRect(x: 100, y: 100, width: 100, height: 100)
         let rect2 = CGRect(x: 120, y: 120, width: 50, height: 50)
         
