@@ -35,7 +35,7 @@ class ObserverViewControllerA: UIViewController {
     }()
     
     deinit {
-        NotificationCenter.default.removeObserver(self)
+//        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewDidLoad() {
