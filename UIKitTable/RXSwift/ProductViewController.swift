@@ -45,6 +45,7 @@ class ProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white 
         view.addSubview(tableView)
         tableView.frame = view.bounds
         bindTableData()
